@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <header>
+      <h1 class="header-title">My To-Do List</h1>
+    </header>
+    <title></title>
+  </head>
+  <body>
+    <div id="weather" class="weather-container">
+      <!-- Weather API Section -->
+    </div>
+
+    <div id="congratulationsPrompt" class="hidden">Congratulations!</div>
+
+    <section id="todos">
+      <h2>TODO List</h2>
+      <ul id="todoList">
+        <!-- TODO LIST Section -->
+      </ul>
+
+      <button id="addTodoBtn" class="centered-button">Add To-Do</button>
+      <div id="todoForm" class="hidden">
+        <input type="text" id="todoName" name="name" placeholder="To-Do Name" />
+        <input type="date" id="dueDate" name="date" />
+        <textarea
+          id="description"
+          name="description"
+          placeholder="Description"
+        ></textarea>
+        <button id="submitTodo" class="centered-button">Submit To-Do</button>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="Weather.js"></script>
+  </body>
+</html>

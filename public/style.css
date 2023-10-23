@@ -1,0 +1,165 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.centered-button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Style for the "Need Help?" link */
+nav {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+/* style for the header */
+header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 20px 0;
+}
+
+/* Style for the header title */
+.header-title {
+  font-family: "Futura Md BT", serif;
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+
+button {
+  margin: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+#todoForm {
+  display: none;
+  margin: 20px;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+  display: block;
+  margin: 10px auto;
+  padding: 5px;
+  width: 80%;
+  border-radius: 5px;
+}
+
+/* Styling for the To-Do List container */
+#todoListContainer {
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  max-width: 80%;
+  margin: 20px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: max-height 0.3s ease-in-out;
+  overflow-y: auto;
+  max-height: 200px; /* Set a maximum height to enable scrolling */
+  background-color: #fff;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #f9f9f9;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#congratulationsPrompt {
+  display: none;
+  position: fixed;
+  top: 40%;
+  left: 43%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  font-size: larger;
+  padding: 20px;
+  border: 4px solid darkslategrey;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  animation: wavy 1s ease-in-out infinite;
+}
+
+/* Define the wavy animation keyframes */
+@keyframes wavy {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+}
+
+.weather-container,
+#todos {
+  margin: 20px auto;
+  max-width: 80%;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.weather-scroll {
+  display: flex;
+  overflow-x: auto;
+}
+
+.weather-card {
+  min-width: 200px;
+  flex: 1;
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+}
+
+.completed-todo {
+  text-decoration: line-through;
+  background-color: #d4edda;
+}
+
+.completed-todo .completeTodo {
+  display: none;
+}
