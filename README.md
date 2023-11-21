@@ -24,4 +24,4 @@
 
 1. run `npm i` - To install dependencies
 2. Start the server by running `npm start`
-3. Open your browser and to to `http://localhost:8080/`
+3. Open your browser and go to `http://localhost:8080/`
