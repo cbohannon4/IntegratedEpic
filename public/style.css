@@ -11,7 +11,7 @@ body {
   margin: 0 auto;
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #007bff;
+  background-color: #1e2d58;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -30,7 +30,7 @@ h1 {
 
 /* style for the header */
 header {
-  background-color: #007bff;
+  background-color: #1e2d58;
   color: #fff;
   padding: 20px 0;
 }
@@ -115,8 +115,7 @@ li {
 
 /* Define the wavy animation keyframes */
 @keyframes wavy {
-  0%,
-  100% {
+  0%, 100% {
     transform: translateX(0);
   }
   25% {
@@ -146,7 +145,7 @@ li {
 }
 
 .weather-card {
-  min-width: 200px;
+  min-width: 150px; /* Adjust the minimum width for smaller screens */
   flex: 1;
   margin: 10px;
   padding: 10px;
@@ -163,3 +162,23 @@ li {
 .completed-todo .completeTodo {
   display: none;
 }
+
+/* Add a new class for flex container */
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 80%;
+  margin: 20px auto;
+}
+
+@media only screen and (max-width: 600px) {
+  /* Adjustments for smaller screens */
+  .flex-container {
+    max-width: 100%;
+  }
+  #weather, #todos {
+    margin: 10px auto;
+  }
+}
+

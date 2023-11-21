@@ -16,8 +16,6 @@ var db = new sqlite3.Database('todo.db');
 // Create a table for tasks if it doesn't exist
 db.run('CREATE TABLE IF NOT EXISTS tasks (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, date TEXT, description TEXT, completed BOOLEAN)');
 
-
-
 app.get('/', function (req, res) {
     html = fs.readFileSync('index.html');
     res.writeHead(200);
@@ -46,10 +44,9 @@ app.post('/add', function (req, res) {
         if (err) {
             return console.log(err.message);
         }
-        console.log(`A row has been inserted with rowid ${this.lastID}`);
+        console.log(`A row has been inserted with row id ${this.lastID}`);
         res.json({ id: this.lastID, name, date, description, completed: false });
     });
-
 });
 
 app.post('/complete', function (req, res) {
@@ -63,10 +60,8 @@ app.post('/complete', function (req, res) {
         console.log(`Task with id ${taskId} marked as completed`);
         res.json({ success: true });
     });
-
 });
 
-// Delete task
 app.delete('/delete/:id', (req, res) => {
     const taskId = req.params.id;
 
